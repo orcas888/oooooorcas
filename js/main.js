@@ -10,7 +10,6 @@
       instances.push(inst);
     }
   });
-  // cleanup on page hide
   document.addEventListener('visibilitychange', () => {
     if (document.hidden) {
       instances.forEach(inst => { if (inst.stop) inst.stop(); });
@@ -49,7 +48,6 @@ window.addEventListener('scroll', () => {
     </div>
   `).join('');
 
-  // 点击卡片播放视频
   grid.addEventListener('click', (e) => {
     const card = e.target.closest('.work-card');
     if (!card) return;
@@ -58,11 +56,11 @@ window.addEventListener('scroll', () => {
   });
 })();
 
-// ===== 视频播放弹窗 =====
+// ===== 视频播放弹窗 (支持 B 站嵌入 + 本地视频) =====
 const modal = document.getElementById('videoModal');
 const overlay = document.getElementById('modalOverlay');
 const closeBtn = document.getElementById('modalClose');
-const video = document.getElementById('modalVideo');
+const wrapper = document.getElementById('modalVideoWrapper');
 const modalTitle = document.getElementById('modalTitle');
 const modalDesc = document.getElementById('modalDesc');
 
@@ -72,22 +70,37 @@ function openModal(index) {
 
   modalTitle.textContent = work.title;
   modalDesc.textContent = work.description;
-  video.src = work.videoSrc;
-  video.load();
+
+  // 清空 wrapper，根据类型创建播放器
+  wrapper.innerHTML = '';
+
+  if (work.type === 'bilibili') {
+    const iframe = document.createElement('iframe');
+    iframe.src = `//player.bilibili.com/player.html?bvid=${work.bvid}&autoplay=1&high_quality=1`;
+    iframe.allow = 'autoplay; encrypted-media';
+    iframe.allowFullscreen = true;
+    wrapper.appendChild(iframe);
+  } else {
+    const video = document.createElement('video');
+    video.id = 'modalVideo';
+    video.controls = true;
+    video.preload = 'metadata';
+    video.src = work.videoSrc;
+    video.load();
+    wrapper.appendChild(video);
+    video.onloadeddata = () => {
+      video.play().catch(() => {});
+    };
+  }
 
   modal.classList.add('open');
   document.body.style.overflow = 'hidden';
-
-  video.onloadeddata = () => {
-    video.play().catch(() => {});
-  };
 }
 
 function closeModal() {
   modal.classList.remove('open');
   document.body.style.overflow = '';
-  video.pause();
-  video.src = '';
+  wrapper.innerHTML = '';
 }
 
 closeBtn.addEventListener('click', closeModal);
@@ -99,7 +112,7 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
-// ===== 导航高亮 (Intersection Observer) =====
+// ===== 导航高亮 =====
 const sections = document.querySelectorAll('.section');
 const navLinks = document.querySelectorAll('.nav-link');
 
@@ -115,7 +128,7 @@ const navObserver = new IntersectionObserver((entries) => {
 
 sections.forEach(s => navObserver.observe(s));
 
-// ===== 滚动渐入动画 (work cards) =====
+// ===== 作品卡片入场动画 =====
 const workCards = document.querySelectorAll('.work-card');
 
 const cardObserver = new IntersectionObserver((entries) => {
