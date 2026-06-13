@@ -1,0 +1,14 @@
+# Videos (too large for git)
+videos/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# Claude local config
+.claude/
