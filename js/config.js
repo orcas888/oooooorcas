@@ -31,11 +31,11 @@ const worksData = [
     tags: ['MV', '古风'],
   },
   {
-    title: '第一章魔术',
-    description: '魔术表演主题作品',
-    videoSrc: 'videos/第一章魔术.mp4',
-    thumbnail: 'thumbnails/第一章魔术.svg',
-    tags: ['魔术', '表演'],
+    title: '我的女鬼委托人',
+    description: '短片作品',
+    videoSrc: 'videos/我的女鬼委托人.mp4',
+    thumbnail: 'thumbnails/我的女鬼委托人.svg',
+    tags: ['短片'],
   },
   {
     title: '黑神话潘金莲3A游戏DEMO',
