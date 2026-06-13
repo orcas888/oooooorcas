@@ -3,11 +3,11 @@
 
 const worksData = [
   {
-    title: '成片纸新娘',
-    description: '志怪题材短片',
-    videoSrc: 'videos/成片纸新娘.mp4',
-    thumbnail: 'thumbnails/成片纸新娘.png',
-    tags: ['古风', '婚礼'],
+    title: '我的女鬼委托人',
+    description: '短片作品',
+    videoSrc: 'videos/我的女鬼委托人.mp4',
+    thumbnail: 'thumbnails/我的女鬼委托人.png',
+    tags: ['短片'],
   },
   {
     title: '聊斋志异画壁',
@@ -17,11 +17,11 @@ const worksData = [
     tags: ['志怪', '创意'],
   },
   {
-    title: '武汉之旅3A游戏DEMO',
-    description: '3A 游戏概念短片',
-    videoSrc: 'videos/武汉之旅3A游戏DEMO.mp4',
-    thumbnail: 'thumbnails/武汉之旅3A游戏DEMO.png',
-    tags: ['游戏', '概念短片'],
+    title: '成片纸新娘',
+    description: '志怪题材短片',
+    videoSrc: 'videos/成片纸新娘.mp4',
+    thumbnail: 'thumbnails/成片纸新娘.png',
+    tags: ['古风', '婚礼'],
   },
   {
     title: '渡红尘简版',
@@ -31,17 +31,17 @@ const worksData = [
     tags: ['MV', '古风'],
   },
   {
-    title: '我的女鬼委托人',
-    description: '短片作品',
-    videoSrc: 'videos/我的女鬼委托人.mp4',
-    thumbnail: 'thumbnails/我的女鬼委托人.png',
-    tags: ['短片'],
-  },
-  {
     title: '黑神话潘金莲3A游戏DEMO',
     description: '风格化游戏概念短片',
     videoSrc: 'videos/黑神话潘金莲3A游戏DEMO.mp4',
     thumbnail: 'thumbnails/黑神话潘金莲3A游戏DEMO.png',
+    tags: ['游戏', '概念短片'],
+  },
+  {
+    title: '武汉之旅3A游戏DEMO',
+    description: '3A 游戏概念短片',
+    videoSrc: 'videos/武汉之旅3A游戏DEMO.mp4',
+    thumbnail: 'thumbnails/武汉之旅3A游戏DEMO.png',
     tags: ['游戏', '概念短片'],
   },
   {
