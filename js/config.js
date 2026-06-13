@@ -38,11 +38,11 @@ const worksData = [
     tags: ['魔术', '表演'],
   },
   {
-    title: 'panjinlian水印',
-    description: '短片作品',
-    videoSrc: 'videos/panjinlian水印.mp4',
-    thumbnail: 'thumbnails/panjinlian水印.svg',
-    tags: ['短片'],
+    title: '黑神话潘金莲3A游戏DEMO',
+    description: '风格化游戏概念短片',
+    videoSrc: 'videos/黑神话潘金莲3A游戏DEMO.mp4',
+    thumbnail: 'thumbnails/黑神话潘金莲3A游戏DEMO.svg',
+    tags: ['游戏', '概念短片'],
   },
   {
     title: '5月4日',
