@@ -13,3 +13,5 @@ Thumbs.db
 # Claude local config
 .claude/
 简历-黄陈.html
+pngs/*.png
+images/*.png
