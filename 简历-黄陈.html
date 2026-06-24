@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>黄陈 - 个人简历</title>
+<style>
+  @page { margin: 0; size: A4; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", sans-serif;
+    font-size: 12px;
+    color: #1a1a2e;
+    line-height: 1.6;
+    background: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+  }
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    background: #fff;
+    padding: 20mm 18mm 15mm 18mm;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    position: relative;
+  }
+
+  /* 左侧色块装饰条 */
+  .page::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 6mm;
+    background: linear-gradient(180deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  }
+
+  /* 头部 */
+  .header {
+    margin-bottom: 8mm;
+    position: relative;
+  }
+  .header h1 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #1a1a2e;
+    letter-spacing: 4px;
+  }
+  .header .subtitle {
+    font-size: 13px;
+    color: #0f3460;
+    font-weight: 500;
+    margin-top: 2px;
+    letter-spacing: 2px;
+  }
+  .header .divider {
+    width: 50px;
+    height: 3px;
+    background: #0f3460;
+    margin-top: 8px;
+  }
+
+  /* 联系信息横向 */
+  .contact-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 24px;
+    margin-bottom: 6mm;
+    padding: 8px 0;
+    border-top: 1px solid #e8e8e8;
+    border-bottom: 1px solid #e8e8e8;
+    font-size: 11px;
+    color: #555;
+  }
+  .contact-row span { white-space: nowrap; }
+  .contact-row .label { color: #888; }
+
+  /* 求职意向 */
+  .intent-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 20px;
+    margin-bottom: 5mm;
+    padding: 8px 12px;
+    background: #f8f9fc;
+    border-radius: 4px;
+    font-size: 11px;
+  }
+  .intent-box .label { color: #888; }
+  .intent-box .val { color: #0f3460; font-weight: 600; }
+
+  /* 个人优势卡片 */
+  .advantage-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 16px;
+    margin-bottom: 6mm;
+  }
+  .advantage-item {
+    padding: 6px 10px;
+    background: #f8f9fc;
+    border-left: 3px solid #0f3460;
+    border-radius: 2px;
+    font-size: 11.5px;
+    line-height: 1.5;
+  }
+
+  /* 章节标题 */
+  .section-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin: 5mm 0 3mm 0;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #1a1a2e;
+    letter-spacing: 2px;
+  }
+
+  /* 项目/工作经验条目 */
+  .entry { margin-bottom: 4mm; }
+  .entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1mm;
+  }
+  .entry-title {
+    font-size: 12.5px;
+    font-weight: 700;
+    color: #1a1a2e;
+  }
+  .entry-sub {
+    font-size: 11.5px;
+    font-weight: 600;
+    color: #0f3460;
+  }
+  .entry-date {
+    font-size: 11px;
+    color: #888;
+    white-space: nowrap;
+  }
+  .entry-body {
+    font-size: 11.5px;
+    color: #333;
+    padding-left: 12px;
+  }
+  .entry-body p {
+    margin-bottom: 1.5mm;
+    text-indent: -6px;
+    padding-left: 6px;
+  }
+  .entry-body strong {
+    color: #1a1a2e;
+    font-weight: 600;
+  }
+
+  .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 1mm;
+  }
+  .tag {
+    padding: 1px 8px;
+    background: #eef2f8;
+    border-radius: 3px;
+    font-size: 10px;
+    color: #0f3460;
+  }
+
+  /* 教育 */
+  .edu-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    padding: 4px 0;
+  }
+  .edu-row .school { font-weight: 600; }
+  .edu-row .meta { color: #666; }
+
+  /* 页脚 */
+  .footer {
+    position: absolute;
+    bottom: 10mm;
+    left: 18mm;
+    right: 18mm;
+    border-top: 1px solid #e8e8e8;
+    padding-top: 4px;
+    font-size: 9px;
+    color: #aaa;
+    text-align: center;
+  }
+
+  @media print {
+    body { background: #fff; padding: 0; }
+    .page { box-shadow: none; padding: 20mm 18mm 15mm 18mm; width: 100%; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- 头部 -->
+  <div class="header">
+    <h1>黄陈</h1>
+    <div class="subtitle">AIGC 短剧制作 · AI 视频创作</div>
+    <div class="divider"></div>
+  </div>
+
+  <!-- 联系信息 -->
+  <div class="contact-row">
+    <span><span class="label">电话</span> 13971206623</span>
+    <span><span class="label">邮箱</span> 176773017@qq.com</span>
+    <span><span class="label">年龄</span> 40岁（1986/08）</span>
+    <span><span class="label">现居</span> 武汉</span>
+    <span><span class="label">作品集</span> https://orcas888.github.io/oooooorcas/#works</span>
+    <span><span class="label">到岗</span> 1周内</span>
+  </div>
+
+  <!-- 求职意向 -->
+  <div class="section-title">求职意向</div>
+  <div class="intent-box">
+    <span><span class="label">期望职能</span> <span class="val">AIGC短剧制作 / AI视频创作 / AIGC内容运营</span></span>
+    <span><span class="label">期望城市</span> <span class="val">武汉</span></span>
+    <span><span class="label">期望月薪</span> <span class="val">6千-8千/月</span></span>
+    <span><span class="label">期望行业</span> <span class="val">互联网/电子商务/AIGC/短剧</span></span>
+    <span><span class="label">工作类型</span> <span class="val">全职</span></span>
+  </div>
+
+  <!-- 个人优势 -->
+  <div class="section-title">个人优势</div>
+  <div class="advantage-grid">
+    <div class="advantage-item"><strong>AIGC短剧/视频制作实践</strong><br>深度学习和实践AIGC视频工具，能用AI完成从剧本构思、分镜设计到视频生成的全流程制作，熟悉主流AI视频工具（Sora/Runway/Pika/可灵/剪映AI等）及ComfyUI工作流，具备独立产出短剧/短视频作品的能力</div>
+    <div class="advantage-item"><strong>故事编剧与内容策划</strong><br>长期接触直播电商内容，懂用户心理、懂爆款逻辑、懂转化路径，能策划出既有传播力又有商业价值的短剧内容</div>
+    <div class="advantage-item"><strong>直播运营经验</strong><br>3年+直播行业经验，熟悉内容全流程（策划-执行-复盘），参与执行"小朱配琦"等头部项目，具备扎实的内容落地能力</div>
+    <div class="advantage-item"><strong>资源整合与沟通协调</strong><br>对接全网MCN机构及达人，覆盖多品类供应链资源，擅长品牌需求理解与内容方案输出</div>
+    <div class="advantage-item"><strong>持续学习能力</strong><br>每日保持学习AIGC前沿工具和行业动态，关注AI在影视/短剧领域的最新应用</div>
+    <div class="advantage-item"><strong>个人作品集持续更新</strong><br>含AI短剧demo、分镜作品、ComfyUI工作流案例</div>
+  </div>
+
+  <!-- AIGC实践 -->
+  <div class="section-title">AIGC 短剧 / 视频相关实践</div>
+
+  <div class="entry">
+    <div class="entry-header">
+      <div class="entry-title">项目一：AI短剧全流程制作实验</div>
+    </div>
+    <div class="entry-body">
+      <p>· 用 ChatGPT/Claude 辅助完成短剧剧本创作，包含人物设定、剧情大纲、分场剧本、对白撰写，目前已积累5个完整短剧剧本</p>
+      <p>· 使用 Midjourney/Stable Diffusion 生成短剧分镜画面和角色设定图，通过提示词控制画风统一和人物一致性</p>
+      <p>· 学习并搭建 ComfyUI 工作流，实现图像生成、图生图、ControlNet 精准控图等操作，提升短剧画面生成的效率与可控性</p>
+      <p>· 探索使用可灵/Runway/Pika 等 AI 视频工具生成短剧片段，完成从文字到画面的转化</p>
+      <p>· 学习剪映AI的自动字幕、AI配音、数字人等功能，完善短剧后期制作流程</p>
+      <p>· 产出 1 部完整 AI 短剧 demo（3 分钟），已上传至作品集</p>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-header">
+      <div class="entry-title">项目二：AI短视频内容批量生产</div>
+    </div>
+    <div class="entry-body">
+      <p>· 利用 ComfyUI 工作流搭建批量图像生成管线，结合提示词模板实现角色一致性和场景快速迭代</p>
+      <p>· 搭建"AI辅助短视频生产"流程：ChatGPT 生成脚本 → Midjourney/ComfyUI 生成素材 → 剪映AI剪辑+配音 → 批量产出</p>
+      <p>· 针对不同品类（美妆/食品/服饰）分别建立提示词模板库，提升内容产出效率</p>
+      <p>· 单条短视频从策划到成片时间从 4 小时缩短至 40 分钟</p>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-header">
+      <div class="entry-title">项目三：持续学习与前沿探索</div>
+    </div>
+    <div class="entry-body">
+      <p>· 每日学习 AIGC 视频工具更新动态，研究国内外 AI 短剧案例（如 Sora 生成短片、AI 动画等）</p>
+      <p>· 关注 AI 短剧行业趋势，研究 AI 在影视创作中的落地场景</p>
+    </div>
+  </div>
+
+  <!-- 工作经验 -->
+  <div class="section-title">工作经验</div>
+
+  <div class="entry">
+    <div class="entry-header">
+      <div class="entry-title">武汉乐淘购电子商务有限公司</div>
+      <div class="entry-date">2019/04 - 2022/03</div>
+    </div>
+    <div class="entry-sub" style="margin-bottom:1mm;">直播运营（商务+场控）</div>
+    <div class="entry-body">
+      <p>· 负责直播全流程运营，包括内容策划、脚本撰写、场控执行、数据复盘</p>
+      <p>· 对接全网 MCN 机构和达人，负责选品开发和商务沟通，覆盖美妆/服饰/食品/母婴等多品类</p>
+      <p>· 参与执行"小朱配琦"第三季、"武汉解封一周年"上新直播节等头部项目</p>
+      <p>· 负责爱奇艺抖音官方账号直播，单场 GMV 达 90W；百度直播间月 GMV 达 100W 左右</p>
+      <p>· 基于直播内容经验，为 AI 短剧创作提供用户洞察和内容方向支持</p>
+    </div>
+    <div class="tag-list" style="margin-top:2mm;">
+      <span class="tag">直播运营</span>
+      <span class="tag">MCN对接</span>
+      <span class="tag">内容策划</span>
+      <span class="tag">场控执行</span>
+      <span class="tag">数据复盘</span>
+    </div>
+  </div>
+
+  <!-- 教育经历 -->
+  <div class="section-title">教育经历</div>
+  <div class="edu-row">
+    <span class="school">江汉大学</span>
+    <span class="meta">电子商务 | 大专</span>
+    <span class="meta">2005/09 - 2010/06</span>
+  </div>
+
+  <div class="footer">更新于 2026 年 6 月</div>
+</div>
+</body>
+</html>
