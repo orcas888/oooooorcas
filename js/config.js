@@ -8,7 +8,7 @@ const worksData = [
     description: '短片作品',
     type: 'bilibili',
     bvid: 'BV1ocJs67EY2',
-    thumbnail: 'thumbnails/我的女鬼委托人.png',
+    thumbnail: 'thumbnails/我的女鬼委托人.svg',
     tags: ['短片'],
   },
   {
@@ -16,7 +16,7 @@ const worksData = [
     description: '志怪题材创意短片',
     type: 'bilibili',
     bvid: 'BV1qfJW6UEnx',
-    thumbnail: 'thumbnails/聊斋志异画壁.png',
+    thumbnail: 'thumbnails/聊斋志异画壁.svg',
     tags: ['志怪', '创意'],
   },
   {
@@ -24,7 +24,7 @@ const worksData = [
     description: '志怪题材短片',
     type: 'bilibili',
     bvid: 'BV1rSJW6REtH',
-    thumbnail: 'thumbnails/成片纸新娘.png',
+    thumbnail: 'thumbnails/成片纸新娘.svg',
     tags: ['古风', '婚礼'],
   },
   {
@@ -32,7 +32,7 @@ const worksData = [
     description: 'MV 风格短片作品',
     type: 'bilibili',
     bvid: 'BV1rSJW6RECD',
-    thumbnail: 'thumbnails/渡红尘简版.png',
+    thumbnail: 'thumbnails/渡红尘简版.svg',
     tags: ['MV', '古风'],
   },
   {
@@ -40,7 +40,7 @@ const worksData = [
     description: '风格化游戏概念短片',
     type: 'bilibili',
     bvid: 'BV1zRJW6HEj6',
-    thumbnail: 'thumbnails/黑神话潘金莲3A游戏DEMO.png',
+    thumbnail: 'thumbnails/黑神话潘金莲3A游戏DEMO.svg',
     tags: ['游戏', '概念短片'],
   },
   {
@@ -48,7 +48,7 @@ const worksData = [
     description: '3A 游戏概念短片',
     type: 'bilibili',
     bvid: 'BV1FRJW6pExS',
-    thumbnail: 'thumbnails/武汉之旅3A游戏DEMO.png',
+    thumbnail: 'thumbnails/武汉之旅3A游戏DEMO.svg',
     tags: ['游戏', '概念短片'],
   },
   {
@@ -56,7 +56,7 @@ const worksData = [
     description: '唱歌表演短片',
     type: 'bilibili',
     bvid: 'BVxxxxxxxxxx',
-    thumbnail: 'thumbnails/人物唱歌视频.png',
+    thumbnail: 'thumbnails/人物唱歌视频.svg',
     tags: ['唱歌', '表演'],
   },
 ];
